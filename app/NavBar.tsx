@@ -18,7 +18,7 @@ function NavBar() {
         <ul className='flex space-x-6'>
             {links.map((link) => {
                 return(
-                    <li>
+                    <li key={link.href} >
                     <Link href={link.href} className={classnames({
                         'text-zinc-900':link.href===currentPath,
                         'text-zinc-500':link.href !== currentPath,
